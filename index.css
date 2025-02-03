@@ -1,0 +1,161 @@
+html, body {
+    padding: 0;
+    margin: 0;
+    background-color: #1f1f1f;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100dvh;
+    box-sizing: border-box;
+    flex-grow: 1;
+    padding: 2rem;
+}
+
+.brown {background-color: burlywood;}
+.white {background-color: whitesmoke;}
+
+.nav {
+    height: 4em;
+    margin-bottom: 2rem;
+}
+
+.item-container1 {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 2rem;
+}
+
+.item-container1 div {
+    height: 2.5rem;
+    width: 15%;
+}
+
+
+.item-container2 {
+    display: flex;
+    margin-bottom: 2rem;
+}
+
+.big-div {
+    height: 30rem;
+    width: 50%;
+    margin-right: 2rem;
+}
+
+.child-container {
+    display: flex;
+    height: 30rem;
+    width: 50%;
+    flex-direction: column;
+}
+
+.big-div2 {
+    height: 50%;
+    width: 100%;
+    margin-bottom: 2rem;
+}
+
+.small-div {
+    height: 50%;
+    width: 100%;
+    display: flex;
+    flex-flow: wrap;
+    gap: 2rem;
+}
+
+.small-div div {
+    height: calc(50% - 1rem);
+    width: calc(50% - 1rem);
+}
+
+.bottom {
+    width: 100%;
+    height: 5rem;
+
+}
+
+@media (min-width: 501px) and (max-width: 800px) {
+    .item-container2 {
+        flex-direction: column;
+    }
+
+    .child-container {
+        width: 100%;
+        flex-direction: row-reverse;
+        height: 15rem;
+    }
+
+    .big-div {
+        width: 100%;
+        height: 15rem;
+        margin-bottom: 2rem;
+    }
+
+    .big-div2 {
+        margin-left: 2rem;
+        height: 100%;
+    }
+
+    .small-div {
+        height: 100%;
+    }
+}
+
+@media (max-width: 500px) {
+
+    body {
+        padding: 1rem;
+    }
+
+    .item-container1 {
+        flex-direction: column;
+        margin-bottom: 0rem;
+    }
+
+    .nav {
+        margin-bottom: 1rem;
+    }
+
+    .item-container1 > div {
+        width: 100%;
+        margin-bottom: 1rem;
+        height: 1rem;
+    }
+
+    .item-container2 {
+        flex-direction: column;
+        width: 100%;
+        margin-bottom: 1rem;
+    }
+
+    .big-div {
+        width: 100%;
+        margin-bottom: 1rem;
+        height: 10rem;
+    }
+
+    .big-div2 {
+        margin-left: 1rem;
+        height: 100%;
+    }
+
+    .child-container {
+        flex-direction: row-reverse;
+        width: 100%;
+        height: 10rem;
+    }
+
+    .small-div {
+        flex-direction: column;
+        flex-wrap: nowrap;
+        gap: 1rem;
+        height: 100%;
+        justify-content: space-between;
+    }
+
+    .small-div > div {
+        width: 100%;
+    }
+}
